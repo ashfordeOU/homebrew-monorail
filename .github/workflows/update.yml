@@ -1,0 +1,40 @@
+name: Update the cask
+
+# Each day, and on demand: points Casks/monorail.rb at the newest Monorail release on
+# monorail.ashforde.org, with the DMG's checksum.
+on:
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Newest version and its checksum
+        env:
+          SIGNING_KEY: ${{ secrets.COMMIT_SIGNING_KEY }}
+        run: |
+          set -euo pipefail
+          version="$(curl -fsSL https://monorail.ashforde.org/releases/latest.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["tag_name"].removeprefix("v"))')"
+          current="$(sed -nE 's/^  version "([^"]+)"/\1/p' Casks/monorail.rb)"
+          echo "newest $version, cask $current"
+          [ "$version" != "$current" ] || exit 0
+          curl -fsSL "https://monorail.ashforde.org/releases/v${version}/Monorail-${version}.dmg" -o Monorail.dmg
+          sum="$(curl -fsSL https://monorail.ashforde.org/releases/latest/SHA256SUMS | awk -v f="Monorail-${version}.dmg" '$2 == f {print $1}')"
+          echo "$sum  Monorail.dmg" | sha256sum -c -
+          sed -i -E -e "s/^  version \"[^\"]+\"/  version \"${version}\"/" -e "s/^  sha256 \"[^\"]+\"/  sha256 \"${sum}\"/" Casks/monorail.rb
+          # Signed as ashfordeOU with the same SSH key as Monorail's own repository.
+          [ -n "$SIGNING_KEY" ] || { echo "::error::Add the COMMIT_SIGNING_KEY secret to this repository"; exit 1; }
+          key="$RUNNER_TEMP/signing_key"; printf '%s\n' "$SIGNING_KEY" > "$key"; chmod 600 "$key"
+          git config user.name ashfordeOU
+          git config user.email 236818772+ashfordeOU@users.noreply.github.com
+          git config gpg.format ssh
+          git config user.signingkey "$key"
+          git commit -S -am "Monorail ${version}"
+          rm -f "$key"
+          git push
