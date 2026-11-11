@@ -13,18 +13,19 @@
 ![Notarised](https://img.shields.io/badge/notarised-by%20Apple-7A5A70)
 ![Free](https://img.shields.io/badge/price-free%2C%20every%20feature-FF9E62)
 
-[Install](#install) · [What you get](#what-you-get) · [Updates](#updates) · [Check it](#check-what-you-install) · [Remove it](#remove-it) · [Help](#help)
+[Install](#install) · [Why free](#stop-paying-for-window-tools) · [What you get](#what-you-get) · [Updates](#updates) · [Privacy](#privacy) · [Check it](#check-what-you-install) · [Remove it](#remove-it) · [Help](#help)
 
 </div>
 
 ---
 
-This is the **Homebrew tap for [Monorail by Ashforde®](https://monorail.ashforde.org)**, a
-scrolling window manager for your Mac.
+This is the **Homebrew tap for [Monorail by Ashforde®](https://monorail.ashforde.org)**, a scrolling
+window manager for your Mac.
 
-Other tilers squeeze every new window into the space you already have. Monorail puts each window
-on a strip that runs past the edges of your display, so nothing shrinks. Open a window and it
-slides in next to the one you're using. Move focus and the strip glides just far enough to show it.
+Other tilers squeeze every new window into the space you already have. Monorail puts each window on
+a strip that runs past the edges of your display, so nothing shrinks. Open a window and it slides in
+next to the one you're using. Move focus and the strip glides just far enough to show it. Quit, and
+every window goes back where it was.
 
 <p align="center"><img src="https://monorail.ashforde.org/assets/readme/how-it-works.svg" alt="How Monorail works: windows on a strip that runs past the screen" width="100%"></p>
 
@@ -43,8 +44,8 @@ brew tap ashfordeou/monorail && brew trust ashfordeou/monorail && brew install -
 ```
 
 Then open Monorail from Applications and allow **Accessibility** when asked (System Settings →
-Privacy & Security → Accessibility). macOS needs that before any app can move windows. The welcome
-tour does the rest.
+Privacy & Security → Accessibility). macOS needs that before any app can move windows; it's the only
+permission Monorail needs. The welcome tour does the rest.
 
 > [!TIP]
 > **Already have Monorail?** Let Homebrew look after the copy you have, without reinstalling:
@@ -54,19 +55,44 @@ tour does the rest.
 > Homebrew 7 and later asks you to trust a tap before it installs from it. `brew trust` does that
 > once, for this tap only.
 
+**Needs:** macOS 13 Ventura or later, on Apple silicon or Intel (one universal app).
+
+## Stop paying for window tools
+
+Mac window tools are usually sold one job at a time, per Mac and per major version: a snapping app,
+a window switcher, a layout app, a keep-awake app, a night-shift app. Monorail does all of it in one
+app, **free, with every feature**: no licence key, no per-Mac limit, no trial clock, no paid upgrade
+next year, no window limits.
+
 ## What you get
 
 <p align="center"><img src="https://monorail.ashforde.org/assets/readme/features.svg" alt="Monorail's features" width="100%"></p>
 
+**The strip**
 - **One strip, nothing shrinks.** Every display, Space and workspace has its own strip. Windows of
   the same app share a slide: side by side, in a grid, main + side or tabs.
-- **Dock and group.** Drag a window onto another to split the slide, as deep as you like, or drop
-  it in the middle for a tab group, even across apps.
-- **See everything.** <kbd>⌃⌥O</kbd> zooms out to every workspace and slide. Drag windows anywhere.
-- **Say it.** Type "Slack and Mail side by side" into the command palette (<kbd>⌃⌥/</kbd>).
-  It's understood on your Mac.
-- **Evening Mode, Stay Awake, Keep me Available, Focus mode** and safe screen sharing, all built in.
-- **Free, with every feature.** No account, no trial, no window limits.
+- **Dock and group.** Drag a window onto another's edge to split the slide, as deep as you like, or
+  onto its middle for a tab group, even across apps. Drag the gap between two windows to resize both.
+- **See everything.** <kbd>⌃⌥O</kbd> zooms out to every workspace and slide; drag windows anywhere.
+- **Saved views.** Nine places per display to jump back to, plus back and forward like a browser.
+- **Displays that remember.** Unplug and replug, and every window goes back where it was.
+
+**Built in, a click away in the menu bar**
+- 🌙 **Evening Mode.** A warmer screen with less blue light, by hand, on a schedule or from sunset
+  to sunrise, with a warmth slider and red light only.
+- ☕ **Stay Awake.** For 15 minutes to 8 hours, until you end it, while something downloads or while
+  an app is open, with the lid closed while plugged in, and **Keep me Available** for Teams and Slack.
+- 🎨 **27 themes**, including Seasons, which changes through the year.
+
+**Smart**
+- 🗣️ **Say it.** Type "Slack and Mail side by side" or "Safari two thirds" in the command palette
+  (<kbd>⌃⌥/</kbd>). Understood on your Mac.
+- 🤖 **AI agent alerts.** A chime when your coding assistant is waiting for approval.
+- 🛡️ **Safe screen sharing.** Private windows step aside when you share in Zoom, Teams or Meet.
+- 🎯 **Focus.** Dim everything but your slide, hide distractions, work in pomodoro blocks.
+- 📦 **Switch in a minute.** Imports your AeroSpace, yabai/skhd or Rectangle setup.
+- 🔌 **Scriptable.** `monorail://` links, a CLI with a live event stream, a local API, MCP for AI
+  assistants, AppleScript and JavaScript.
 
 <p align="center"><img src="https://monorail.ashforde.org/assets/readme/overview.svg" alt="The overview: every workspace and its slides" width="100%"></p>
 
@@ -80,7 +106,12 @@ tour does the rest.
 | <kbd>⌃⌥F</kbd> | Full width |
 | <kbd>⌃⌥O</kbd> | Overview |
 
-All 270 actions: [monorail.ashforde.org/docs/actions](https://monorail.ashforde.org/docs/actions/).
+All 270 actions: [monorail.ashforde.org/docs/actions](https://monorail.ashforde.org/docs/actions/) ·
+every setting: [monorail.ashforde.org/docs/settings](https://monorail.ashforde.org/docs/settings/).
+
+**On Windows or Linux?** Monorail for Windows 11 and 10, and for GNOME 45 or later, are in beta:
+[Windows](https://monorail.ashforde.org/download/windows/) ·
+[GNOME](https://monorail.ashforde.org/download/linux/).
 
 ## Updates
 
@@ -89,12 +120,22 @@ once a day and installs a new version only if its checksum and Apple signature m
 follows along (the cask is `auto_updates`), so you don't need `brew upgrade` for it.
 
 This tap moves to each new version by itself, every day, from the
-[release feed](https://monorail.ashforde.org/releases/latest.json).
+[release feed](https://monorail.ashforde.org/releases/latest.json). What changed in each version:
+[changelog](https://monorail.ashforde.org/changelog/).
+
+## Privacy
+
+No account, and window titles, app names, file names and anything on your screen never leave your
+Mac. Monorail sends anonymous daily usage counts (versions, Mac type and which features are on, with
+a random install ID and no IP address kept); switch them off in Settings → Devices & Sharing → Trust,
+where **What's Sent…** shows them in full. Details:
+[monorail.ashforde.org/privacy](https://monorail.ashforde.org/privacy/).
 
 ## Check what you install
 
-Every release is signed with Ashforde OÜ's Apple Developer ID (Team `D69G45342Y`) and notarised
-by Apple. After installing:
+Every release is signed with Ashforde OÜ's Apple Developer ID (Team `D69G45342Y`) and notarised by
+Apple. System Integrity Protection stays on: no kernel extension, nothing injected into the Dock.
+After installing:
 
 ```bash
 spctl -a -vvv /Applications/Monorail.app
@@ -116,7 +157,7 @@ Every window comes back on screen when Monorail quits.
 ## Help
 
 - **Support and common fixes:** [monorail.ashforde.org/support](https://monorail.ashforde.org/support/)
-- **For IT and MDM** (pkg, configuration profile, Installomator): [monorail.ashforde.org/docs/it](https://monorail.ashforde.org/docs/it/)
+- **For IT and MDM** (pkg, configuration profile): [monorail.ashforde.org/docs/it](https://monorail.ashforde.org/docs/it/)
 - **Problems, ideas or press:** [contact@ashforde.org](mailto:contact@ashforde.org), or **Report a Problem…** in Monorail's Settings
 - **Security:** [monorail.ashforde.org/docs/security](https://monorail.ashforde.org/docs/security/)
 
