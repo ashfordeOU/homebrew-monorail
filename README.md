@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://monorail.ashforde.org/assets/readme/banner.svg" alt="Monorail by Ashforde® — every window rides one rail" width="100%">
+<img src="https://monorail.ashforde.org/assets/readme/banner.svg" alt="Monorail by Ashforde® — your whole Mac, on one rail" width="100%">
 
 <br>
 
@@ -19,8 +19,9 @@
 
 ---
 
-This is the **Homebrew tap for [Monorail by Ashforde®](https://monorail.ashforde.org)**, a scrolling
-window manager for your Mac.
+This is the **Homebrew tap for [Monorail by Ashforde®](https://monorail.ashforde.org)**: your whole Mac,
+on one rail. A scrolling window manager with a battery manager, Stay Awake, Evening Mode, focus tools
+and AI-agent control built in. One free app instead of five paid ones.
 
 Other tilers squeeze every new window into the space you already have. Monorail puts each window on
 a strip that runs past the edges of your display, so nothing shrinks. Open a window and it slides in
@@ -59,10 +60,10 @@ permission Monorail needs. The welcome tour does the rest.
 
 ## Stop paying for window tools
 
-Mac window tools are usually sold one job at a time, per Mac and per major version: a snapping app,
-a window switcher, a layout app, a keep-awake app, a night-shift app. Monorail does all of it in one
-app, **free, with every feature**: no licence key, no per-Mac limit, no trial clock, no paid upgrade
-next year, no window limits.
+Mac utilities are usually sold one job at a time, per Mac and per major version: a snapping app,
+a window switcher, a layout app, a tiling app, a battery app, a keep-awake app, a night-shift app.
+Monorail does all of it in one app, **free, with every feature**: no licence key, no per-Mac limit,
+no trial clock, no paid upgrade next year, no window limits.
 
 ## What you get
 
@@ -82,12 +83,20 @@ next year, no window limits.
   to sunrise, with a warmth slider and red light only.
 - ☕ **Stay Awake.** For 15 minutes to 8 hours, until you end it, while something downloads or while
   an app is open, with the lid closed while plugged in, and **Keep me Available** for Teams and Slack.
+- ⚡ **Battery manager.** Charge, time left, the watts your Mac draws, Low Power Mode, a day of
+  history with battery health, and every app and AI agent by battery use, with Quit, Pause or Hide
+  and how much time quitting gives back. ⚡ also marks power-hungry windows. Nothing leaves your Mac.
 - 🎨 **27 themes**, including Seasons, which changes through the year.
 
 **Smart**
 - 🗣️ **Say it.** Type "Slack and Mail side by side" or "Safari two thirds" in the command palette
   (<kbd>⌃⌥/</kbd>). Understood on your Mac.
-- 🤖 **AI agent alerts.** A chime when your coding assistant is waiting for approval.
+- 🤖 **Made for AI agents.** Claude, Cursor, Hermes Agent, OpenClaw and other MCP clients, agents that
+  load skills, and any bot that can run a command can arrange your windows
+  ([how](https://monorail.ashforde.org/docs/agents/)). A chime when your coding agent waits for you.
+- 🧭 **No shortcut clashes.** Settings shows any shortcut macOS already uses and swaps it in one click.
+- 📱 **Every kind of display.** Portrait monitors stack windows, screen edges can be kept clear, and
+  Monorail steps aside while Stage Manager is on.
 - 🛡️ **Safe screen sharing.** Private windows step aside when you share in Zoom, Teams or Meet.
 - 🎯 **Focus.** Dim everything but your slide, hide distractions, work in pomodoro blocks.
 - 📦 **Switch in a minute.** Imports your AeroSpace, yabai/skhd or Rectangle setup.
@@ -106,7 +115,7 @@ next year, no window limits.
 | <kbd>⌃⌥F</kbd> | Full width |
 | <kbd>⌃⌥O</kbd> | Overview |
 
-All 270 actions: [monorail.ashforde.org/docs/actions](https://monorail.ashforde.org/docs/actions/) ·
+All 300+ actions: [monorail.ashforde.org/docs/actions](https://monorail.ashforde.org/docs/actions/) ·
 every setting: [monorail.ashforde.org/docs/settings](https://monorail.ashforde.org/docs/settings/).
 
 **On Windows or Linux?** Monorail for Windows 11 and 10, and for GNOME 45 or later, are in beta:
@@ -128,8 +137,8 @@ This tap moves to each new version by itself, every day, from the
 No account, and window titles, app names, file names and anything on your screen never leave your
 Mac. Monorail sends anonymous daily usage counts (versions, Mac type and which features are on, with
 a random install ID and no IP address kept); switch them off in Settings → Devices & Sharing → Trust,
-where **What's Sent…** shows them in full. Details:
-[monorail.ashforde.org/privacy](https://monorail.ashforde.org/privacy/).
+where **What's Sent…** shows them in full. Battery figures are worked out on your Mac and never sent.
+Details: [monorail.ashforde.org/privacy](https://monorail.ashforde.org/privacy/).
 
 ## Check what you install
 
